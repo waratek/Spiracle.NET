@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\git\Spiracle.NET\WebSite\bin\Release\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AdoNetCore.AseClient.dll">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="bin/Google.Protobuf.dll">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.FriendlyUrls.dll">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="bin/Oracle.ManagedDataAccess.dll">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="bin/WebSite.dll">
+      <publishTime>09/16/2020 18:16:18</publishTime>
+    </File>
+    <File Include="bin/WebSite.pdb">
+      <publishTime>09/16/2020 18:16:18</publishTime>
+    </File>
+    <File Include="CSRF.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="css/bootstrap-theme.min.css">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="css/bootstrap.min.css">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_int.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_int_quote_id.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_string.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_string_param_question_mark.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_string_quote_id.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_Union.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Get_Union_quote_id.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Implicit_Join_Namespace.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="DB2_Implicit_Join_Namespace_quote_id.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="default.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Deserialization.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="file.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="js/bootstrap.min.js">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="js/jquery.min.js">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSqlDatabaseQuery.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_Implicit_Join.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_int.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_int_inline.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_int_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_string.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_string_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_string_param_question_mark.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Get_Union.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MsSql_Implicit_Join_Namespace.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Get_Implicit_Join.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Get_int.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Get_string.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Get_string_param_question_mark.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Get_union.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="MySql_Implicit_Join_Namespace.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_Full_Outer_Join.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_Implicit_Join.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int_groupby.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int_having.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int_inline.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_int_orderby.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_string.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_string_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_string_no_quote_sanitised.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_string_param_question_mark.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_string_sanitised.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Oracle_Get_Union.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="pathTraversal/testFilesParent/TestFile">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="pathTraversal/testFilesParent/testFilesChild/TestFile">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="pathTraversal/testFilesParent/testFilesChild/testFilesGrandChild/TestFile">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="path_traversal.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.js">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.js">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Scripts/jquery-2.1.1.min.map">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Scripts/nugetexample.js">
+      <publishTime>01/07/2019 10:20:59</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Site.Mobile.Master">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="sql.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_Implicit_Join.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_int_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_string.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_string_no_quote.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_string_param_question_mark.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Get_Union.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Sybase_Implicit_Join_Namespace.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>09/16/2020 18:16:19</publishTime>
+    </File>
+    <File Include="xss.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+    <File Include="xssContextMatrix.aspx">
+      <publishTime>09/16/2020 17:43:24</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

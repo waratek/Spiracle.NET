@@ -1,0 +1,673 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{52959D09-295D-41FC-A1B7-3CD6EF5832E5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite</RootNamespace>
+    <AssemblyName>WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>true</Use64BitIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdoNetCore.AseClient, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AdoNetCore.AseClient.0.13.1\lib\net46\AdoNetCore.AseClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="IBM.Data.DB2, Version=9.7.4.4, Culture=neutral, PublicKeyToken=7c307b91aa13d208, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\IBM\SQLLIB\BIN\netf40\IBM.Data.DB2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.13\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.18.3, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.18.3.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <!--ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup-->
+  <ItemGroup>
+    <Content Include="CSRF.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Db2_Get_Union_quote_id.aspx" />
+    <Content Include="Db2_Get_Union.aspx" />
+    <Content Include="Db2_Implicit_Join_Namespace_quote_id.aspx" />
+    <Content Include="Db2_Implicit_Join_Namespace.aspx" />
+    <Content Include="Db2_Get_int_quote_id.aspx" />
+    <Content Include="Db2_Get_string_param_question_mark.aspx" />
+    <Content Include="Db2_Get_string_quote_id.aspx" />
+    <Content Include="Db2_Get_string.aspx" />
+    <Content Include="Deserialization.aspx" />
+    <Content Include="MsSqlDatabaseQuery.aspx" />
+    <Content Include="MsSql_Get_int_no_quote.aspx" />
+    <Content Include="MsSql_Get_int_inline.aspx" />
+    <Content Include="MsSql_Get_string_no_quote.aspx" />
+    <Content Include="path_traversal.aspx" />
+    <Content Include="file.aspx" />
+    <Content Include="xssContextMatrix.aspx" />
+    <Content Include="xss.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="MsSql_Get_string_param_question_mark.aspx" />
+    <Content Include="MsSql_Implicit_Join_Namespace.aspx" />
+    <Content Include="MsSql_Get_Implicit_Join.aspx" />
+    <Content Include="MsSql_Get_Union.aspx" />
+    <Content Include="MsSql_Get_string.aspx" />
+    <Content Include="Db2_Get_int.aspx" />
+    <Content Include="MySql_Get_string_param_question_mark.aspx" />
+    <Content Include="MySql_Implicit_Join_Namespace.aspx" />
+    <Content Include="MySql_Get_Implicit_Join.aspx" />
+    <Content Include="MySql_Get_union.aspx" />
+    <Content Include="MySql_Get_string.aspx" />
+    <Content Include="Oracle_Get_Union.aspx" />
+    <Content Include="Oracle_Get_Full_Outer_Join.aspx" />
+    <Content Include="Oracle_Get_Implicit_Join.aspx" />
+    <Content Include="Oracle_Get_string_param_question_mark.aspx" />
+    <Content Include="Oracle_Get_string_no_quote_sanitised.aspx" />
+    <Content Include="Oracle_Get_string_sanitised.aspx" />
+    <Content Include="Oracle_Get_string_no_quote.aspx" />
+    <Content Include="Oracle_Get_string.aspx" />
+    <Content Include="Oracle_Get_int_inline.aspx" />
+    <Content Include="Oracle_Get_int_having.aspx" />
+    <Content Include="Oracle_Get_int_orderby.aspx" />
+    <Content Include="Oracle_Get_int_groupby.aspx" />
+    <Content Include="Oracle_Get_int_no_quote.aspx" />
+    <Content Include="Sybase_Implicit_Join_Namespace.aspx" />
+    <Content Include="Sybase_Get_Implicit_Join.aspx" />
+    <Content Include="Sybase_Get_Union.aspx" />
+    <Content Include="Sybase_Get_string_param_question_mark.aspx" />
+    <Content Include="Sybase_Get_string_no_quote.aspx" />
+    <Content Include="Sybase_Get_string.aspx" />
+    <Content Include="Sybase_Get_int_no_quote.aspx" />
+    <Content Include="MySql_Get_int.aspx" />
+    <Content Include="Oracle_Get_int.aspx" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="sql.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="MsSql_Get_int.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CSRF.aspx.cs">
+      <DependentUpon>CSRF.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSRF.aspx.designer.cs">
+      <DependentUpon>CSRF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_Union_quote_id.aspx.cs">
+      <DependentUpon>Db2_Get_Union_quote_id.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_Union_quote_id.aspx.designer.cs">
+      <DependentUpon>Db2_Get_Union_quote_id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_Union.aspx.cs">
+      <DependentUpon>Db2_Get_Union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_Union.aspx.designer.cs">
+      <DependentUpon>Db2_Get_Union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Implicit_Join_Namespace_quote_id.aspx.cs">
+      <DependentUpon>Db2_Implicit_Join_Namespace_quote_id.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Implicit_Join_Namespace_quote_id.aspx.designer.cs">
+      <DependentUpon>Db2_Implicit_Join_Namespace_quote_id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Implicit_Join_Namespace.aspx.cs">
+      <DependentUpon>Db2_Implicit_Join_Namespace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Implicit_Join_Namespace.aspx.designer.cs">
+      <DependentUpon>Db2_Implicit_Join_Namespace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_int_quote_id.aspx.cs">
+      <DependentUpon>Db2_Get_int_quote_id.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_int_quote_id.aspx.designer.cs">
+      <DependentUpon>Db2_Get_int_quote_id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_string_param_question_mark.aspx.cs">
+      <DependentUpon>Db2_Get_string_param_question_mark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_string_param_question_mark.aspx.designer.cs">
+      <DependentUpon>Db2_Get_string_param_question_mark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_string_quote_id.aspx.cs">
+      <DependentUpon>Db2_Get_string_quote_id.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_string_quote_id.aspx.designer.cs">
+      <DependentUpon>Db2_Get_string_quote_id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Db2_Get_string.aspx.cs">
+      <DependentUpon>Db2_Get_string.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_string.aspx.designer.cs">
+      <DependentUpon>Db2_Get_string.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deserialization.aspx.cs">
+      <DependentUpon>Deserialization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deserialization.aspx.designer.cs">
+      <DependentUpon>Deserialization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSqlDatabaseQuery.aspx.cs">
+      <DependentUpon>MsSqlDatabaseQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSqlDatabaseQuery.aspx.designer.cs">
+      <DependentUpon>MsSqlDatabaseQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_int_no_quote.aspx.cs">
+      <DependentUpon>MsSql_Get_int_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_int_no_quote.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_int_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_int_inline.aspx.cs">
+      <DependentUpon>MsSql_Get_int_inline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_int_inline.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_int_inline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_string_no_quote.aspx.cs">
+      <DependentUpon>MsSql_Get_string_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_string_no_quote.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_string_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="path_traversal.aspx.cs">
+      <DependentUpon>path_traversal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="path_traversal.aspx.designer.cs">
+      <DependentUpon>path_traversal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="file.aspx.cs">
+      <DependentUpon>file.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="file.aspx.designer.cs">
+      <DependentUpon>file.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xssContextMatrix.aspx.cs">
+      <DependentUpon>xssContextMatrix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xssContextMatrix.aspx.designer.cs">
+      <DependentUpon>xssContextMatrix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="xss.aspx.cs">
+      <DependentUpon>xss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="xss.aspx.designer.cs">
+      <DependentUpon>xss.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="DB2Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_int.aspx.cs">
+      <DependentUpon>Db2_Get_int.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Db2_Get_int.aspx.designer.cs">
+      <DependentUpon>Db2_Get_int.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_string_param_question_mark.aspx.cs">
+      <DependentUpon>MsSql_Get_string_param_question_mark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_string_param_question_mark.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_string_param_question_mark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Implicit_Join_Namespace.aspx.cs">
+      <DependentUpon>MsSql_Implicit_Join_Namespace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Implicit_Join_Namespace.aspx.designer.cs">
+      <DependentUpon>MsSql_Implicit_Join_Namespace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_Implicit_Join.aspx.cs">
+      <DependentUpon>MsSql_Get_Implicit_Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_Implicit_Join.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_Implicit_Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_Union.aspx.cs">
+      <DependentUpon>MsSql_Get_Union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_Union.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_Union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Get_string_param_question_mark.aspx.cs">
+      <DependentUpon>MySql_Get_string_param_question_mark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Get_string_param_question_mark.aspx.designer.cs">
+      <DependentUpon>MySql_Get_string_param_question_mark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Implicit_Join_Namespace.aspx.cs">
+      <DependentUpon>MySql_Implicit_Join_Namespace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Implicit_Join_Namespace.aspx.designer.cs">
+      <DependentUpon>MySql_Implicit_Join_Namespace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Get_Implicit_Join.aspx.cs">
+      <DependentUpon>MySql_Get_Implicit_Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Get_Implicit_Join.aspx.designer.cs">
+      <DependentUpon>MySql_Get_Implicit_Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Get_union.aspx.cs">
+      <DependentUpon>MySql_Get_union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Get_union.aspx.designer.cs">
+      <DependentUpon>MySql_Get_union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Get_string.aspx.cs">
+      <DependentUpon>MySql_Get_string.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Get_string.aspx.designer.cs">
+      <DependentUpon>MySql_Get_string.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_Union.aspx.cs">
+      <DependentUpon>Oracle_Get_Union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_Union.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_Union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_Full_Outer_Join.aspx.cs">
+      <DependentUpon>Oracle_Get_Full_Outer_Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_Full_Outer_Join.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_Full_Outer_Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_Implicit_Join.aspx.cs">
+      <DependentUpon>Oracle_Get_Implicit_Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_Implicit_Join.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_Implicit_Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_string_param_question_mark.aspx.cs">
+      <DependentUpon>Oracle_Get_string_param_question_mark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_string_param_question_mark.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_string_param_question_mark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_string_no_quote_sanitised.aspx.cs">
+      <DependentUpon>Oracle_Get_string_no_quote_sanitised.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_string_no_quote_sanitised.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_string_no_quote_sanitised.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_string_sanitised.aspx.cs">
+      <DependentUpon>Oracle_Get_string_sanitised.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_string_sanitised.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_string_sanitised.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_string_no_quote.aspx.cs">
+      <DependentUpon>Oracle_Get_string_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_string_no_quote.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_string_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_string.aspx.cs">
+      <DependentUpon>Oracle_Get_string.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_string.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_string.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int_inline.aspx.cs">
+      <DependentUpon>Oracle_Get_int_inline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int_inline.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int_inline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int_having.aspx.cs">
+      <DependentUpon>Oracle_Get_int_having.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int_having.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int_having.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int_orderby.aspx.cs">
+      <DependentUpon>Oracle_Get_int_orderby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int_orderby.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int_orderby.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int_groupby.aspx.cs">
+      <DependentUpon>Oracle_Get_int_groupby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int_groupby.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int_groupby.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int_no_quote.aspx.cs">
+      <DependentUpon>Oracle_Get_int_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int_no_quote.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Implicit_Join_Namespace.aspx.cs">
+      <DependentUpon>Sybase_Implicit_Join_Namespace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Implicit_Join_Namespace.aspx.designer.cs">
+      <DependentUpon>Sybase_Implicit_Join_Namespace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_Implicit_Join.aspx.cs">
+      <DependentUpon>Sybase_Get_Implicit_Join.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_Implicit_Join.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_Implicit_Join.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_Union.aspx.cs">
+      <DependentUpon>Sybase_Get_Union.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_Union.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_Union.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_string_param_question_mark.aspx.cs">
+      <DependentUpon>Sybase_Get_string_param_question_mark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_string_param_question_mark.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_string_param_question_mark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_string_no_quote.aspx.cs">
+      <DependentUpon>Sybase_Get_string_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_string_no_quote.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_string_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_string.aspx.cs">
+      <DependentUpon>Sybase_Get_string.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_string.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_string.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sybase_Get_int_no_quote.aspx.cs">
+      <DependentUpon>Sybase_Get_int_no_quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sybase_Get_int_no_quote.aspx.designer.cs">
+      <DependentUpon>Sybase_Get_int_no_quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SybasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OraclePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySqlPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSqlPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_string.aspx.cs">
+      <DependentUpon>MsSql_Get_string.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_string.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_string.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MySql_Get_int.aspx.cs">
+      <DependentUpon>MySql_Get_int.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MySql_Get_int.aspx.designer.cs">
+      <DependentUpon>MySql_Get_int.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Oracle_Get_int.aspx.cs">
+      <DependentUpon>Oracle_Get_int.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Oracle_Get_int.aspx.designer.cs">
+      <DependentUpon>Oracle_Get_int.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sql.aspx.cs">
+      <DependentUpon>sql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sql.aspx.designer.cs">
+      <DependentUpon>sql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsSql_Get_int.aspx.cs">
+      <DependentUpon>MsSql_Get_int.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsSql_Get_int.aspx.designer.cs">
+      <DependentUpon>MsSql_Get_int.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Site.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\jquery-2.1.1.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pathTraversal\testFilesParent\testFilesChild\testFilesGrandChild\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <PropertyGroup>
+    <CopyAllFilesToSingleFolderForPackageDependsOn>
+      CustomCollectFiles;
+      $(CopyAllFilesToSingleFolderForPackageDependsOn);
+    </CopyAllFilesToSingleFolderForPackageDependsOn>
+  </PropertyGroup>
+  <Target Name="CustomCollectFiles">
+    <ItemGroup>
+      <PathTraversalFiles Include=".\pathTraversal\**\*" />
+      <FilesForPackagingFromProject Include="%(PathTraversalFiles.Identity)">
+        <DestinationRelativePath>pathTraversal\%(RecursiveDir)%(Filename)%(Extension)</DestinationRelativePath>
+      </FilesForPackagingFromProject>
+    </ItemGroup>
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49408</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49408/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--Import Project="..\packages\IBM.Data.DB2.Core.1.3.0.100\build\IBM.Data.DB2.Core.targets" Condition="Exists('..\packages\IBM.Data.DB2.Core.1.3.0.100\build\IBM.Data.DB2.Core.targets')" /-->
+  <!--Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\IBM.Data.DB2.Core.1.3.0.100\build\IBM.Data.DB2.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IBM.Data.DB2.Core.1.3.0.100\build\IBM.Data.DB2.Core.targets'))" />
+  </Target-->
+  <!--Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
