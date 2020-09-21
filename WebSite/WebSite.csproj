@@ -107,6 +107,8 @@
     <Content Include="Db2_Get_string_quote_id.aspx" />
     <Content Include="Db2_Get_string.aspx" />
     <Content Include="Deserialization.aspx" />
+    <Content Include="idor.aspx" />
+    <Content Include="idor_get_user.aspx" />
     <Content Include="MsSqlDatabaseQuery.aspx" />
     <Content Include="MsSql_Get_int_no_quote.aspx" />
     <Content Include="MsSql_Get_int_inline.aspx" />
@@ -233,6 +235,20 @@
     </Compile>
     <Compile Include="Deserialization.aspx.designer.cs">
       <DependentUpon>Deserialization.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="idor.aspx.cs">
+      <DependentUpon>idor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="idor.aspx.designer.cs">
+      <DependentUpon>idor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="idor_get_user.aspx.cs">
+      <DependentUpon>idor_get_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="idor_get_user.aspx.designer.cs">
+      <DependentUpon>idor_get_user.aspx</DependentUpon>
     </Compile>
     <Compile Include="MsSqlDatabaseQuery.aspx.cs">
       <DependentUpon>MsSqlDatabaseQuery.aspx</DependentUpon>
