@@ -32,6 +32,7 @@
                   <li><a href="path_traversal.aspx"> Path Traversal</a></li>
                   <li><a href="csrf.aspx"> CSRF</a></li>
                   <li><a href="Deserialization.aspx"> Deserializattion</a></li>
+                  <li><a href="idor.aspx"> IDOR</a></li>
               </ul>
             </div>
         </div>
