@@ -115,6 +115,7 @@
     <Content Include="MsSql_Get_string_no_quote.aspx" />
     <Content Include="path_traversal.aspx" />
     <Content Include="file.aspx" />
+    <Content Include="Redirect.aspx" />
     <Content Include="xssContextMatrix.aspx" />
     <Content Include="xss.aspx" />
     <Content Include="default.aspx" />
@@ -291,6 +292,13 @@
     </Compile>
     <Compile Include="file.aspx.designer.cs">
       <DependentUpon>file.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
     </Compile>
     <Compile Include="xssContextMatrix.aspx.cs">
       <DependentUpon>xssContextMatrix.aspx</DependentUpon>
