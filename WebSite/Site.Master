@@ -33,6 +33,7 @@
                   <li><a href="csrf.aspx"> CSRF</a></li>
                   <li><a href="Deserialization.aspx"> Deserializattion</a></li>
                   <li><a href="idor.aspx"> IDOR</a></li>
+                  <li><a href="Misc.aspx"> MISC</a></li>
               </ul>
             </div>
         </div>
