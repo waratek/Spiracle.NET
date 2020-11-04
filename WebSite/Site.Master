@@ -31,9 +31,9 @@
                   <li><a href="xss.aspx"> XSS</a></li>
                   <li><a href="path_traversal.aspx"> Path Traversal</a></li>
                   <li><a href="csrf.aspx"> CSRF</a></li>
-                  <li><a href="Deserialization.aspx"> Deserializattion</a></li>
+                  <li><a href="Deserialization.aspx"> Deserialization</a></li>
                   <li><a href="idor.aspx"> IDOR</a></li>
-                  <li><a href="Misc.aspx"> MISC</a></li>
+                  <li><a href="Redirect.aspx"> Open-Redirect</a></li>
               </ul>
             </div>
         </div>

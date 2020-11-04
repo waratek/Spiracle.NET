@@ -8,11 +8,14 @@ using System.Web.UI.WebControls;
 
 namespace WebSite
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Redirect : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             var redirectType = this.Request.QueryString["redirectType"];
+
+            if (string.IsNullOrEmpty(redirectType)) return;
+            
             var value = Request.QueryString["value"];
 
             switch (redirectType)
