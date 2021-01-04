@@ -40,6 +40,21 @@ namespace WebSite
                         Response.StatusCode = (int)HttpStatusCode.Redirect;
                         break;
                     }
+                case "HardcodedResponseRedirectToGoogle":
+                    {
+                        Response.Redirect("http://www.google.com");
+                        break;
+                    }
+                case "PartiallyHardcodedResponseRedirectToGoo":
+                    {
+                        Response.Redirect("http://www.goo" + value);
+                        break;
+                    }
+                case "PartiallyHardcodedResponseRedirectTo":
+                    {
+                        Response.Redirect("http://" + value);
+                        break;
+                    }
             }
         }
     }
