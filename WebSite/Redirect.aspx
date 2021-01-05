@@ -15,8 +15,7 @@
 
             <div class="panel-body">
                 <a href="Redirect.aspx?redirectType=ResponseRedirect&value=default.aspx">Redirect to default.aspx with Response redirect</a> <br/>
-                <a href="Redirect.aspx?redirectType=HeaderRedirect&value=default.aspx">Redirect to default.aspx with header and return code</a> <br/>
-                <a href="Redirect.aspx?redirectType=ResponseRedirectLocation&value=default.aspx">Redirect to default.aspx with response redirect location</a>
+                <a href="Redirect.aspx?redirectType=HeaderRedirect&value=default.aspx">Redirect to default.aspx with header and return code</a>
             </div>
         </div>
 
